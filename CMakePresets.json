@@ -1,0 +1,38 @@
+{
+  "version": 10,
+  "configurePresets": [
+    {
+      "name": "default",
+      "binaryDir": "build/${presetName}",
+      "installDir": "build/install/${presetName}",
+      "generator": "Ninja Multi-Config",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "${sourceDir}/build/install",
+        "CMAKE_VERIFY_INTERFACE_HEADER_SETS": true,
+        "CMAKE_PROJECT_INCLUDE_BEFORE": "${sourceDir}/cmake/SetupHunter.cmake"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default",
+      "configuration": "Release"
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "default",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "default"
+        },
+        {
+          "type": "build",
+          "name": "default"
+        }
+      ]
+    }
+  ]
+}
