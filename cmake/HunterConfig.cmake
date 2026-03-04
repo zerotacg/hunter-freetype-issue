@@ -1,4 +1,4 @@
 hunter_config(freetype
   URL "https://github.com/zerotacg/freetype/tarball/fix/compatibility-with-case-sensitive-package-name"
-  SHA1 "706adbef29e8df994f8efa06f34100e948bcda69"
+  SHA1 "65a0a497ffc4dddc1a75bdcb3fd0ee26b0690693"
 )
